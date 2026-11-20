@@ -1,0 +1,38 @@
+{
+  "name": "dsh-workspace-policy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Per-workspace tool disclosure policy for DeepSeek Harness: four levels (nothing / picked tools / picked tools + skills / normal), workspace defaults with per-session override.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "tools",
+    "disclosure"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyuxuan6666/dsh-workspace-policy.git"
+  },
+  "homepage": "https://github.com/liuyuxuan6666/dsh-workspace-policy#readme",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

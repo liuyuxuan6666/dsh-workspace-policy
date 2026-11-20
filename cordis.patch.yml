@@ -1,0 +1,9 @@
+# dsh-workspace-policy bundle patch
+# One Host row: reads the per-workspace policy file and applies a scoped
+# tools.restrict() to each Agent at creation. Also serves the loopback route
+# the composer control uses to read/change the level.
+- insert:
+    - id: workspace-policy
+      name: 'dsh-workspace-policy'
+      config:
+        defaultLevel: 4
