@@ -3,6 +3,15 @@
 Per-workspace tool disclosure for DeepSeek Harness. One composer control, four levels,
 workspace defaults with a per-session override.
 
+## 安装
+
+```bash
+dsh plugin --profile <name> add github:liuyuxuan6666/dsh-workspace-policy
+```
+
+或在 DSH 里用 `plugin_manager` 的 `install_bundle`，target 填
+`github:liuyuxuan6666/dsh-workspace-policy`。装完重启一次，输入框左侧出现两个控件。
+
 ## 档位
 
 | 档 | 含义 | 实际动作 |
